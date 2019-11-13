@@ -1,3 +1,11 @@
+<#
+    Written by Jordan Hammond
+    Copyright © 2019 PDQ.com Corporation
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+#>
+
 $FormatNumbers = {
     $this.Text -match '[0-9]'
     $this.Text = $this.Text -replace '[a-z]', ""
