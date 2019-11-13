@@ -130,7 +130,6 @@ function New-RetirementGraph {
 
 Function New-RetirementData {
     $showGraphClicked = { 
-        "I was here" | out-file c:\temp\log.txt
         # Just return the object instead of doing a variable assignment and returning the variable
         $hash = [PSCustomObject]@{
             StartYear                        = $StartYear.Text
@@ -162,8 +161,6 @@ Function New-RetirementData {
     $OKButton.Location = New-Object System.Drawing.Point(75, 280)
     $OKButton.Size = New-Object System.Drawing.Size(75, 23)
     $OKButton.Text = 'Show Graph'
-    # Don't set a DialogResult to prevent the form from closing
-    # $OKButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
     $OKButton.Add_Click($showGraphClicked)
     $RetirementCalculator.AcceptButton = $OKButton
 
